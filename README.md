@@ -1,43 +1,84 @@
-# react-mini-ecommerce
-A modern React-based mini e-commerce application showcasing product listings, dynamic search, and cart functionality using both Context API and Redux Toolkit. Includes routing, lazy loading, toast notifications, and responsive UI components.
-
 # 🛍️ React Mini E-commerce App
 
-A modern React-based mini e-commerce application that demonstrates core concepts such as routing, component architecture, state management (using both Context API and Redux Toolkit), and user interaction with a dynamic product cart. Built with scalability and performance in mind.
+A modern React + TypeScript e-commerce project that demonstrates essential React concepts with a clean and responsive UI. Built using both **Context API** and **Redux Toolkit** to compare state management techniques.
 
 ---
 
 ## 🚀 Features
 
-- 🧩 Product listing with reusable cards  
-- 🔍 Search filtering using `useMemo`  
-- 🛒 Add-to-cart functionality  
-- 🎯 Dual state management: `Context API` + `Redux Toolkit`  
-- 🛤️ Routing using `react-router-dom`  
-- 📦 Lazy loading with `React.lazy` + `Suspense`  
-- ✅ Toast notifications with `react-toastify`  
-- ⚙️ Component-based architecture  
-- 🧠 Optimized with `useCallback`, `useRef`  
-- 📱 Fully responsive UI  
+- 🧩 Reusable Product Cards
+- 🔍 Live Search Filtering with `useMemo`
+- 🛒 Add to Cart (Context API + Redux Toolkit)
+- 🧠 React Hooks: `useCallback`, `useRef`, `useMemo`, `useReducer`
+- 🛤️ Client-side Routing with `react-router-dom`
+- 💤 Lazy Loading via `React.lazy` & `Suspense`
+- ✅ Toast Notifications with `react-toastify`
+- 📱 Fully Responsive UI with modular CSS
+- 🔧 Built using Vite for fast development
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Frontend      | State Management     | Routing            | Tooling           |
-|---------------|----------------------|--------------------|-------------------|
-| React + TypeScript | Context API, Redux Toolkit | React Router DOM | Vite, Toastify    |
+| Category         | Tech                          |
+|------------------|-------------------------------|
+| Framework        | React (with TypeScript)       |
+| State Management | Context API, Redux Toolkit    |
+| Routing          | React Router DOM              |
+| Build Tool       | Vite                          |
+| Notifications    | React Toastify                |
+| Styling          | CSS Modules                   |
 
 ---
 
-## 📂 Folder Structure
+## 📁 Folder Structure
 
 src/
-├── components/ # Reusable UI components
+├── components/ # Reusable components (ProductCard, Navbar)
 ├── context/ # Context API logic
-├── redux/ # Redux Toolkit setup
-├── pages/ # All screens (Home, Product Details, Cart)
+├── redux/ # Redux slices and store
+├── pages/ # Route components (Home, Products, Cart, etc.)
 ├── utils/ # Static product data
-├── AppRouter.tsx # Lazy-loaded routing logic
+├── AppRouter.tsx # Centralized route management
 ├── main.tsx # App entry point
-└── styles/ # CSS Modules
+└── styles/ # Module CSS files
+
+
+
+---
+
+## 🧪 Learning Highlights
+
+This project covers all major concepts from **Day 1 to Day 5** of the React roadmap:
+
+### ✅ React Concepts:
+- JSX, props, state
+- Functional Components
+- Component Architecture
+
+### ✅ React Router:
+- `Route`, `Link`, `useParams`
+- Lazy loading and suspense
+- Error boundaries
+
+### ✅ Hooks:
+- `useMemo`, `useCallback`, `useRef`, `useReducer`
+
+### ✅ State Management:
+- Context API and custom hooks
+- Redux Toolkit (store, slice, `useSelector`, `useDispatch`)
+
+### ✅ JavaScript Concepts:
+- Async/await & Promises
+- Array filtering, flattening
+- Event delegation basics
+
+---
+
+## 📦 Getting Started
+
+```bash
+git clone https://github.com/narayansharmadev/react-mini-ecommerce.git
+cd react-mini-ecommerce
+npm install
+npm run dev
