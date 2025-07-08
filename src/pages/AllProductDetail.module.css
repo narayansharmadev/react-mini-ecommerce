@@ -1,0 +1,43 @@
+.pageContainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 2rem;
+
+}
+
+.searchandtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardWrapper {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+.cardWrapper:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

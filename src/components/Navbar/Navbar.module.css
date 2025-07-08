@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3182ce;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.button,
+.buttonOutline {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.button {
+  background-color: #3182ce;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #2b6cb0;
+}
+
+.buttonOutline {
+  border: 2px solid #3182ce;
+  color: #3182ce;
+}
+
+.buttonOutline:hover {
+  background-color: #3182ce;
+  color: #fff;
+}
