@@ -20,7 +20,8 @@ const NavBar: React.FC = () => {
         <Link to="/">MyShop</Link>
       </div>
       <div className={styles.links}>
-        <Link to="/" className={styles.button}>Home</Link>
+        <Link to="/home" className={styles.button}>Home</Link>
+        <Link to="/dashboard" className={styles.button}>Dashboard</Link>
         <Link to="/products" className={styles.button}>Products</Link>
         <Link to="/redux-products" className={styles.button}>Redux Products</Link>
         <Link to="/about" className={styles.buttonOutline}>About Us</Link>

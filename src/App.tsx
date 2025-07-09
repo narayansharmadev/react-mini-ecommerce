@@ -7,16 +7,31 @@ import { CartProvider } from './context/CartContext';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from './context/AuthContext';
+import { useLocation } from 'react-router-dom';
+
+const AppContent: React.FC = () => {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/';
+
+  return (
+    <>
+      {!hideNavbar && <Navbar />}
+      <AppRouter />
+      <ToastContainer />
+    </>
+  );
+};
 
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <Provider store={store}>
-        <CartProvider> {/* ✅ Wrap everything that uses useCart() */}
-          <Navbar />
-          <AppRouter />
-          <ToastContainer />
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <AppContent />
+          </CartProvider>
+        </AuthProvider>
       </Provider>
     </ErrorBoundary>
   );
