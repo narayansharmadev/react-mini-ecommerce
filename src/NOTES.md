@@ -1,77 +1,88 @@
-# 📘 React Developer Learning Notes (Day 1 to Day 6)
+# 📘 React Developer Learning Notes (Day 1 to Day 7)
 
 ---
 
 ## 📅 Day 1: React Basics & Component Architecture
 
-- **JSX (JavaScript XML):** Syntax that lets you write HTML inside JavaScript.
+- **JSX (JavaScript XML):** HTML jaisa syntax jo JavaScript me likhte hain.
 - **Functional vs Class Components:**
-  - Functional components are simpler and commonly used with hooks.
-- **Props:** Used to pass data from parent to child components.
-- **State:** Used to manage dynamic data inside a component.
-- **Practice Task:** Built a `ProductCard` component showing product image, title, and price.
+  - Functional components hooks ke saath easy hote hain.
+- **Props:** Data ko ek component se dusre me bhejne ke liye.
+- **State:** Component ke andar ka dynamic data.
+- ✅ **Practice:** Ek ProductCard banaya jisme image, title, price tha.
 
 ---
 
 ## 📅 Day 2: Routing, Lazy Loading & Error Boundaries
 
 - **React Router DOM:**
-  - Used `<Route>`, `<Link>`, and `useParams()` for client-side routing.
-- **Dynamic Routing:** Created product detail page using dynamic routes with `useParams`.
-- **Lazy Loading:** Loaded components on-demand using `React.lazy()` and `<Suspense>`.
-- **Error Boundaries:** Implemented a class-based component to catch rendering errors.
+  - `<Route>`, `<Link>`, `useParams()` ka use karke pages ke beech routing ki.
+- **Dynamic Routing:** Product detail page me dynamic URL se data fetch kiya.
+- **Lazy Loading:** `React.lazy()` & `Suspense` se components ko on-demand load kiya.
+- **Error Boundary:** Custom class component banaya jo error handle karta hai render phase me.
 
 ---
 
-## 📅 Day 3: React Hooks Deep Dive
+## 📅 Day 3: Hooks Deep Dive
 
-- **useMemo:** Memoizes expensive calculations to avoid recalculating on every render.
-- **useCallback:** Memoizes functions to prevent unnecessary re-creation.
-- **useRef:** References DOM elements or persists values across renders without causing re-renders.
-- **useReducer:** An alternative to `useState` for more complex state logic.
-- **Practice Task:** Added search filter functionality in product list using `useMemo`.
+- **useMemo:** Heavy calculation ko memoize karta hai taaki har render me na chale.
+- **useCallback:** Function ko memoize karta hai taaki unnecessary re-creation na ho.
+- **useRef:** DOM elements ya koi bhi value ko store karta hai bina re-render ke.
+- **useReducer:** State ka complex logic manage karne ke liye.
+- ✅ **Practice:** useMemo ke sath optimized product filtering kiya.
 
 ---
 
 ## 📅 Day 4: State Management – Context API vs Redux Toolkit
 
 - **Context API:**
-  - Built a global cart context with `addToCart`, `removeFromCart`, and `clearCart`.
-  - Used `useContext()` to access cart data throughout the app.
+  - Cart context banaya jisme `addToCart`, `removeFromCart`, `clearCart`.
+  - `useContext()` se context access kiya.
 - **Redux Toolkit:**
-  - Used `createSlice`, `useDispatch`, and `useSelector` for centralized state.
-  - Created a `cartSlice.ts` with actions and reducers.
-- **Comparison:**
-  - Context API is good for small to medium apps.
-  - Redux Toolkit is more scalable for large applications with multiple state slices.
+  - `createSlice`, `useDispatch`, `useSelector` ka use kiya centralized state ke liye.
+- ✅ **Comparison:**
+  - Context choti apps ke liye theek hai.
+  - Redux large apps me better scalability deta hai.
 
 ---
 
 ## 📅 Day 5: Advanced JavaScript for Interviews
 
 - **Promises vs Async/Await:**
-  - Promises use `.then()` chaining.
-  - `async/await` offers cleaner, more readable syntax.
-- **Flattening Arrays:** Converted nested arrays into a single-level array using recursion or `flat()`.
-- **Filtering Object Arrays:** Used `.filter()` to get data based on category or condition.
-- **Event Delegation:** Handled multiple child events using a single parent event listener.
+  - Promises me `.then()` use hota hai, `async/await` se code readable hota hai.
+- **Flattening Arrays:** Nested arrays ko single level me convert kiya.
+- **Filtering Object Arrays:** `.filter()` se category wise data nikala.
+- **Event Delegation:** Parent element se sab children ke event handle kiye.
 
 ---
 
 ## 📅 Day 6: Authentication + Protected Routes
 
-- **Fake JWT Auth:** Used localStorage to store a dummy token after login.
-- **AuthContext:** Created context for login/logout functionality with a fake user.
-- **ProtectedRoute Component:** Prevents access to certain routes (like `/dashboard`) if the user is not authenticated.
-- **Navigation:** Used `useNavigate()` from React Router to redirect after login.
-- **Toast Notifications:** Displayed success or error messages using `react-toastify`.
+- **Fake JWT Auth:** Dummy token `localStorage` me store kiya login ke baad.
+- **AuthContext:** Login/logout logic ke liye ek global context banaya.
+- **ProtectedRoute Component:** Login na hone par dashboard ko access nahi karne diya.
+- **Navigation:** `useNavigate()` se login ke baad dashboard me redirect.
+- ✅ **Notifications:** Login error/success ke liye `react-toastify` ka use.
 
 ---
 
-🧠 **Summary:**
-This covers everything from React basics to state management and authentication, preparing you for real-world projects and interviews.
+## 📅 Day 7: JavaScript Project + Reflection
+
+- 🔍 **Project:** Pokémon Table App banaya using:
+  - `fetch()` for API calls
+  - DOM manipulation (`createElement`, `innerHTML`)
+  - `Promise.all()` for parallel fetch
+- ✅ **New Repo:** [Pok-mon-Table-App](https://github.com/narayansharmadev/Pok-mon-Table-App)
+- 🧠 **Reflection:**
+  - Confidence in API, async/await, and JavaScript logic improved.
+  - DOM ke sath interact karne ka achha practical mila.
+  - React ke bahar ka bhi experience mila Vanilla JS me.
 
 ---
 
-🔗 **Next:** Continue with Day 7 – JavaScript Project & Reflection
+## 🔖 Summary (Till Day 7)
 
+- React ka complete base clear ho chuka hai (JSX, state, props, routing, hooks).
+- Context vs Redux samajh aa gaya.
+- Authentication flow and protected routing implemented.
+- JS ke core topics like promises, filtering, and DOM manipulation par confidence aaya.

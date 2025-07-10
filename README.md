@@ -48,15 +48,13 @@ src/
 ├── main.tsx # App entry point
 └── vite.config.ts # Vite configuration
 
-markdown
-Copy
-Edit
+
 
 ---
 
 ## 🧪 Learning Highlights
 
-This project implements concepts from **Day 1 to Day 6** of your React roadmap:
+This project implements concepts from **Day 1 to Day 7** of the React learning roadmap:
 
 ### ✅ Day 1 - React Basics & Architecture
 - JSX, props, state
@@ -87,6 +85,13 @@ This project implements concepts from **Day 1 to Day 6** of your React roadmap:
 - Token-based logic (hardcoded `fake-jwt-token`)
 - `ProtectedRoute` for `/dashboard`
 
+### ✅ Day 7 - JavaScript DOM & API Practice
+- Built a Vanilla JS app that:
+  - Fetches Pokémon data from public API
+  - Uses `fetch()`, `async/await`, and `Promise.all()`
+  - Dynamically renders a styled table in the DOM
+- 🔗 [Pokémon Table App GitHub Repo](https://github.com/narayansharmadev/Pok-mon-Table-App)
+
 ---
 
 ## 📦 Getting Started
@@ -96,10 +101,7 @@ git clone https://github.com/narayansharmadev/react-mini-ecommerce.git
 cd react-mini-ecommerce
 npm install
 npm run dev
-Login Credentials:
 
-bash
-Copy
-Edit
+
 Email: admin@gmail.com
 Password: 123456
