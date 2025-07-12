@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -16,9 +17,31 @@
   color: #3182ce;
 }
 
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #3182ce;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
 .links {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.linksOpen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .button,
@@ -47,4 +70,20 @@
 .buttonOutline:hover {
   background-color: #3182ce;
   color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    width: 100%;
+  }
+
+  .linksOpen {
+    display: flex;
+  }
 }

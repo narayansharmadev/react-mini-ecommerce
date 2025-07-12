@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ProtectedRoute from '../components/ProtectedRoute';
+import ResponsiveForm from '../pages/ResponsiveForm';
+import StyledTable from '../pages/StyledTable';
 
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
@@ -29,6 +31,8 @@ const AppRouter: React.FC = () => {
         {/* Redux-based product & cart */}
         <Route path="/redux-products" element={<AllProductRedux />} />
         <Route path="/redux-cart" element={<ReduxCart />} />
+        <Route path="/responsive-form" element={<ResponsiveForm />} />
+        <Route path="/styled-table" element={<StyledTable />} />
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={
           <ProtectedRoute>
