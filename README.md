@@ -1,104 +1,115 @@
-# 📘 React Developer Learning Notes (Day 1 to Day 8)
+# 🛍️ React Mini E-commerce App
+
+A modern React + TypeScript e-commerce project that demonstrates essential React concepts with a clean and responsive UI. This app showcases state management using **both Context API and Redux Toolkit**, allowing you to compare their real-world usage side-by-side.
 
 ---
 
-## 📅 Day 1: React Basics & Component Architecture
+## 🚀 Features
 
-- **JSX (JavaScript XML):** HTML-like syntax written inside JavaScript.
-- **Functional vs Class Components:**
-  - Functional components are simple and work well with hooks.
-- **Props:** Used to pass data from one component to another.
-- **State:** Manages dynamic data within a component.
-- ✅ **Practice:** Created a `ProductCard` with image, title, and price.
-
----
-
-## 📅 Day 2: Routing, Lazy Loading & Error Boundaries
-
-- **React Router DOM:**
-  - Used `<Route>`, `<Link>`, and `useParams()` for navigation.
-- **Dynamic Routing:** Displayed product details using dynamic URLs.
-- **Lazy Loading:** Used `React.lazy()` & `Suspense` to load components only when needed.
-- **Error Boundary:** Created a class-based component to catch render-time errors.
+- 🧩 **Reusable Product Cards**
+- 🔍 **Live Search Filtering** using `useMemo`
+- 🛒 **Add to Cart** (via Context API + Redux Toolkit)
+- 🧠 **React Hooks**: `useCallback`, `useRef`, `useMemo`, `useReducer`
+- 🛤️ **Client-side Routing** with `react-router-dom`
+- 💤 **Lazy Loading** via `React.lazy` & `Suspense`
+- ✅ **Toast Notifications** with `react-toastify`
+- 🔐 **Protected Routes & Fake Auth** with custom `AuthContext`
+- 🧪 **Login Flow** with hardcoded credentials (`admin@gmail.com` / `123456`)
+- 📱 **Responsive UI** using **CSS Modules**
+- 🔧 Built using **Vite** for lightning-fast development
 
 ---
 
-## 📅 Day 3: Hooks Deep Dive
+## 🛠️ Tech Stack
 
-- **useMemo:** Memoizes expensive calculations to optimize performance.
-- **useCallback:** Memoizes functions to prevent unnecessary re-creations.
-- **useRef:** Stores DOM references or values across renders without re-rendering.
-- **useReducer:** Manages complex state logic in components.
-- ✅ **Practice:** Applied `useMemo` for optimized product search filtering.
-
----
-
-## 📅 Day 4: State Management – Context API vs Redux Toolkit
-
-- **Context API:**
-  - Built a global cart context with `addToCart`, `removeFromCart`, `clearCart`.
-  - Accessed context using `useContext()`.
-- **Redux Toolkit:**
-  - Used `createSlice`, `useDispatch`, and `useSelector` for global state.
-- ✅ **Comparison:**
-  - Context is ideal for small/medium apps.
-  - Redux Toolkit is better suited for larger applications.
+| Category         | Tech                          |
+|------------------|-------------------------------|
+| Framework        | React (TypeScript)            |
+| State Management | Context API, Redux Toolkit    |
+| Routing          | React Router DOM              |
+| Styling          | CSS Modules                   |
+| Build Tool       | Vite                          |
+| Notifications    | React Toastify                |
 
 ---
 
-## 📅 Day 5: Advanced JavaScript for Interviews
+## 📁 Folder Structure
 
-- **Promises vs Async/Await:**
-  - Promises use `.then()`, while `async/await` provides cleaner syntax.
-- **Flattening Arrays:** Converted nested arrays into flat arrays.
-- **Filtering Object Arrays:** Used `.filter()` to extract items by condition.
-- **Event Delegation:** Used a parent event handler to manage child events efficiently.
+src/
+├── components/ # Reusable components (ProductCard, Navbar, etc.)
+│ └── Redux/ # Redux-specific components (ReduxCart)
+├── context/ # Context API logic (Cart & Auth)
+├── redux/ # Redux store and cart slice
+├── pages/ # Page components (Home, Products, Cart, Login, etc.)
+├── routes/ # AppRouter and ProtectedRoute
+├── utils/ # Static product data
+├── styles/ # CSS Modules
+├── App.tsx # App root with providers
+├── main.tsx # App entry point
+└── vite.config.ts # Vite configuration
 
----
 
-## 📅 Day 6: Authentication + Protected Routes
 
-- **Fake JWT Auth:** Stored a dummy token in `localStorage` after login.
-- **AuthContext:** Created a global context for login/logout.
-- **ProtectedRoute Component:** Prevented access to dashboard if not logged in.
-- **Navigation:** Used `useNavigate()` for redirection after login.
-- ✅ **Toast Notifications:** Displayed login success/error using `react-toastify`.
-
----
-
-## 📅 Day 7: JavaScript Project + Reflection
-
-- 🔍 **Project:** Built a Pokémon Table App using:
-  - `fetch()` for API calls
-  - DOM manipulation (`createElement`, `innerHTML`)
-  - `Promise.all()` for concurrent data fetching
-- ✅ **New Repo:** [Pok-mon-Table-App](https://github.com/narayansharmadev/Pok-mon-Table-App)
-- 🧠 **Reflection:**
-  - Gained confidence in working with APIs and async logic.
-  - Practiced raw DOM manipulation outside React.
-  - Learned real-world use of `Promise.all()` and basic error handling.
 
 ---
 
-## 📅 Day 8: CSS Practice + Accessibility + UI Design
+## 🧪 Learning Highlights
 
-- **CSS Modules:** Styled each component with isolated `.module.css` files.
-- **Responsive Design:** Used Flexbox and CSS Grid to support mobile/tablet/desktop views.
-- **Form Styling:** Styled the login form with spacing, border-radius, focus effects.
-- **Accessibility:**
-  - Used `alt` attributes for images.
-  - Provided labels and placeholders for form inputs.
-  - Ensured good color contrast and spacing for readability.
-- ✅ **Practice Pages Created:**
-  - `StyledLogin.tsx` → Designed login UI.
-  - `StyledTable.tsx` → Displayed table using modern CSS layout.
+This project implements concepts from **Day 1 to Day 8** of your React roadmap:
+
+### ✅ Day 1 - React Basics & Architecture
+- JSX, props, state
+- Functional components
+- ProductCard component
+
+### ✅ Day 2 - Routing & Lazy Loading
+- `react-router-dom` (Route, Link, useParams)
+- `React.lazy`, `Suspense`
+- Custom `ErrorBoundary`
+
+### ✅ Day 3 - Hooks Deep Dive
+- `useMemo` for optimized filtering
+- `useCallback`, `useReducer`, `useRef`
+
+### ✅ Day 4 - State Management
+- Add to Cart using **Context API**
+- Compare with **Redux Toolkit** implementation
+- `useSelector`, `useDispatch`, `createSlice`
+
+### ✅ Day 5 - JavaScript Deep Concepts
+- Promises vs async/await
+- Filtering arrays by category
+- Event delegation (prep for UI interactions)
+
+### ✅ Day 6 - Authentication
+- Fake login system using `AuthContext`
+- Token-based logic (hardcoded `fake-jwt-token`)
+- `ProtectedRoute` for `/dashboard`
+
+### ✅ Day 7 - JavaScript Project & Reflection
+- Created a **Pokémon Table App** using plain JavaScript.
+- DOM manipulation with `createElement`, `innerHTML`, `querySelector`.
+- Used `Promise.all()` to fetch multiple APIs in parallel.
+- ✅ [GitHub Repo](https://github.com/narayansharmadev/Pok-mon-Table-App)
+
+### ✅ Day 8 – UI, CSS Practice & Accessibility
+- Practiced responsive design with **CSS Modules**.
+- Styled **Login Form** and **Table** layout pages.
+- Used **Flexbox**, **Grid**, and media queries.
+- Applied **accessibility best practices** like `aria-label`, `alt` text, and keyboard nav.
+- ✅ Created: `StyledLogin.tsx`, `StyledTable.tsx`
 
 ---
 
-## 🔖 Summary (Till Day 8)
+## 📦 Getting Started
 
-- React fundamentals like JSX, props, state, routing, and hooks are now strong.
-- Understood both Context API and Redux for state management.
-- Implemented complete authentication and routing guards.
-- Strengthened JavaScript with APIs, fetch, promises, and DOM control.
-- Enhanced UI/UX knowledge using responsive CSS and accessibility best practices.
+```bash
+git clone https://github.com/narayansharmadev/react-mini-ecommerce.git
+cd react-mini-ecommerce
+npm install
+npm run dev
+
+
+
+Email: admin@gmail.com
+Password: 123456
