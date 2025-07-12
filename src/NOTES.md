@@ -1,104 +1,173 @@
-# 📘 React Developer Learning Notes (Day 1 to Day 8)
+📘 React Developer Learning Notes (Day 1 to Day 11)
 
----
+📅 Day 1: React Basics & Component Architecture
+JSX (JavaScript XML): HTML-like syntax written inside JavaScript.
 
-## 📅 Day 1: React Basics & Component Architecture
+Functional vs Class Components: Functional components are simpler and support hooks.
 
-- **JSX (JavaScript XML):** HTML-like syntax written inside JavaScript.
-- **Functional vs Class Components:**
-  - Functional components are simple and work well with hooks.
-- **Props:** Used to pass data from one component to another.
-- **State:** Manages dynamic data within a component.
-- ✅ **Practice:** Created a `ProductCard` with image, title, and price.
+Props: Data passed from one component to another.
 
----
+State: Stores and manages internal data in a component.
 
-## 📅 Day 2: Routing, Lazy Loading & Error Boundaries
+✅ Practice: Built a ProductCard with title, image, and price.
 
-- **React Router DOM:**
-  - Used `<Route>`, `<Link>`, and `useParams()` for navigation.
-- **Dynamic Routing:** Displayed product details using dynamic URLs.
-- **Lazy Loading:** Used `React.lazy()` & `Suspense` to load components only when needed.
-- **Error Boundary:** Created a class-based component to catch render-time errors.
+📅 Day 2: Routing, Lazy Loading & Error Boundaries
+React Router DOM: Used <Route>, <Link>, and useParams() for page routing.
 
----
+Dynamic Routing: Displayed individual product pages via URL parameters.
 
-## 📅 Day 3: Hooks Deep Dive
+Lazy Loading: Applied React.lazy() and Suspense to delay component loading.
 
-- **useMemo:** Memoizes expensive calculations to optimize performance.
-- **useCallback:** Memoizes functions to prevent unnecessary re-creations.
-- **useRef:** Stores DOM references or values across renders without re-rendering.
-- **useReducer:** Manages complex state logic in components.
-- ✅ **Practice:** Applied `useMemo` for optimized product search filtering.
+Error Boundary: Implemented class-based error handling component.
 
----
+📅 Day 3: Hooks Deep Dive
+useMemo: Avoids unnecessary re-calculations of values.
 
-## 📅 Day 4: State Management – Context API vs Redux Toolkit
+useCallback: Prevents re-creation of functions on re-render.
 
-- **Context API:**
-  - Built a global cart context with `addToCart`, `removeFromCart`, `clearCart`.
-  - Accessed context using `useContext()`.
-- **Redux Toolkit:**
-  - Used `createSlice`, `useDispatch`, and `useSelector` for global state.
-- ✅ **Comparison:**
-  - Context is ideal for small/medium apps.
-  - Redux Toolkit is better suited for larger applications.
+useRef: Holds mutable values across renders without causing re-renders.
 
----
+useReducer: Manages complex state logic in components.
 
-## 📅 Day 5: Advanced JavaScript for Interviews
+✅ Practice: Used useMemo for optimized product search filtering.
 
-- **Promises vs Async/Await:**
-  - Promises use `.then()`, while `async/await` provides cleaner syntax.
-- **Flattening Arrays:** Converted nested arrays into flat arrays.
-- **Filtering Object Arrays:** Used `.filter()` to extract items by condition.
-- **Event Delegation:** Used a parent event handler to manage child events efficiently.
+📅 Day 4: State Management – Context API vs Redux Toolkit
+Context API:
 
----
+Created cart context for adding/removing items.
 
-## 📅 Day 6: Authentication + Protected Routes
+Accessed it using useContext().
 
-- **Fake JWT Auth:** Stored a dummy token in `localStorage` after login.
-- **AuthContext:** Created a global context for login/logout.
-- **ProtectedRoute Component:** Prevented access to dashboard if not logged in.
-- **Navigation:** Used `useNavigate()` for redirection after login.
-- ✅ **Toast Notifications:** Displayed login success/error using `react-toastify`.
+Redux Toolkit:
 
----
+Built store using configureStore and createSlice.
 
-## 📅 Day 7: JavaScript Project + Reflection
+Accessed state using useSelector and updated using useDispatch.
 
-- 🔍 **Project:** Built a Pokémon Table App using:
-  - `fetch()` for API calls
-  - DOM manipulation (`createElement`, `innerHTML`)
-  - `Promise.all()` for concurrent data fetching
-- ✅ **New Repo:** [Pok-mon-Table-App](https://github.com/narayansharmadev/Pok-mon-Table-App)
-- 🧠 **Reflection:**
-  - Gained confidence in working with APIs and async logic.
-  - Practiced raw DOM manipulation outside React.
-  - Learned real-world use of `Promise.all()` and basic error handling.
+✅ Comparison:
 
----
+Context API: best for smaller apps.
 
-## 📅 Day 8: CSS Practice + Accessibility + UI Design
+Redux Toolkit: better for large-scale apps with scalable needs.
 
-- **CSS Modules:** Styled each component with isolated `.module.css` files.
-- **Responsive Design:** Used Flexbox and CSS Grid to support mobile/tablet/desktop views.
-- **Form Styling:** Styled the login form with spacing, border-radius, focus effects.
-- **Accessibility:**
-  - Used `alt` attributes for images.
-  - Provided labels and placeholders for form inputs.
-  - Ensured good color contrast and spacing for readability.
-- ✅ **Practice Pages Created:**
-  - `StyledLogin.tsx` → Designed login UI.
-  - `StyledTable.tsx` → Displayed table using modern CSS layout.
+📅 Day 5: Advanced JavaScript for Interviews
+Promises vs Async/Await: Compared syntax and readability.
 
----
+Flatten Arrays: Converted nested arrays to flat using .flat().
 
-## 🔖 Summary (Till Day 8)
+Filter Object Arrays: Used .filter() to extract data based on conditions.
 
-- React fundamentals like JSX, props, state, routing, and hooks are now strong.
-- Understood both Context API and Redux for state management.
-- Implemented complete authentication and routing guards.
-- Strengthened JavaScript with APIs, fetch, promises, and DOM control.
-- Enhanced UI/UX knowledge using responsive CSS and accessibility best practices.
+Event Delegation: Handled child elements' events via parent.
+
+📅 Day 6: Authentication + Protected Routes
+Fake JWT: Stored dummy token in localStorage after login.
+
+AuthContext: Used to globally manage login/logout status.
+
+Protected Routes: Restricted access using a ProtectedRoute component.
+
+✅ Toast Alerts: Used react-toastify to show login status feedback.
+
+📅 Day 7: JavaScript Project + Reflection
+🔍 Project: Pokémon Table App (Vanilla JS)
+
+Used fetch() and Promise.all() to fetch data.
+
+Created DOM elements using JS (createElement, appendChild)
+
+✅ Reflection:
+
+Improved understanding of async calls and DOM APIs.
+
+Gained practical experience with promises and parallel fetch.
+
+📅 Day 8: CSS Practice + Accessibility
+CSS Modules: Scoped styles for each component individually.
+
+Responsive Layout: Used Flexbox and Grid to support different screen sizes.
+
+Form Styling: Styled login form inputs, buttons with consistent spacing.
+
+Accessibility:
+
+Added proper alt, label, and aria attributes.
+
+Ensured contrast and keyboard navigation.
+
+✅ Practice Pages:
+
+StyledLogin.tsx: Styled login page.
+
+StyledTable.tsx: Table UI using responsive layout.
+
+📅 Day 9: Performance Optimization Tools & Techniques
+React DevTools: Analyzed re-renders, state changes, and props.
+
+Chrome Performance Tab: Tracked long frames, JS execution time.
+
+Memoization:
+
+Used useMemo for expensive value calculations.
+
+Used useCallback to avoid re-creating functions.
+
+Lazy Loading: Reduced initial bundle size using React.lazy.
+
+📅 Day 10: ESLint, Webpack & WebSocket Basics
+ESLint:
+
+Configured custom ESLint rules using .eslintrc.
+
+Helps enforce code quality and consistency.
+
+Webpack:
+
+Understood roles of entry, loaders, output, and plugins.
+
+Webpack bundles JS/CSS/Assets for production.
+
+Vite vs Webpack:
+
+Vite is faster in dev because of native ES Modules.
+
+Webpack is widely used and highly customizable.
+
+WebSocket Basics:
+
+Real-time communication protocol.
+
+Compared it to HTTP polling.
+
+Learned when to use it (e.g., chat apps, notifications).
+
+📅 Day 11: Testing & Error Handling
+Vitest Setup:
+
+Installed Vitest and configured it with Vite.
+
+Used jsdom for simulating browser environment.
+
+React Testing Library:
+
+render(), screen.getByText(), and expect() to assert output.
+
+Used toBeInTheDocument() matcher from @testing-library/jest-dom.
+
+Error Handling:
+
+Implemented error boundary using class components.
+
+Added fallback UIs for crash-safe applications.
+
+🔖 Summary (Till Day 11)
+React knowledge (JSX, props, hooks, routing, lazy loading) is solid.
+
+Implemented both Context API and Redux for managing global state.
+
+Completed an authentication system and protected routing.
+
+Gained frontend interview confidence: promises, arrays, event handling.
+
+Practiced performance profiling, linting, and introduced testing strategy.
+
+Learned UI design with responsive layouts and accessibility best practices.
